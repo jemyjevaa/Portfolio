@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink-rgb: 15, 23, 42;
+  --ink: #0f172a;
+  --ink-muted: #64748b;
+  --ink-faint: #cbd5e1;
+  --surface-rgb: 255, 255, 255;
+  --surface: #ffffff;
+  --surface-alt-rgb: 248, 250, 252;
+  --surface-alt: #f8fafc;
+  --white: #ffffff;
+  --card-bg: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.92);
+  --accent: #1e293b;
+  --accent2: #C00000;
+  --accent2-rgb: 192, 0, 0;
+  --accent3: #10b981;
+  --accent4: #8b5cf6;
+}
+
+.dark {
+  --ink-rgb: 241, 245, 249;
+  --ink: #f1f5f9;
+  --ink-muted: #94a3b8;
+  --ink-faint: #475569;
+  --surface-rgb: 15, 23, 42;
+  --surface: #0f172a;
+  --surface-alt-rgb: 30, 41, 59;
+  --surface-alt: #1e293b;
+  --white: #0f172a;
+  --card-bg: #1e293b;
+  --nav-bg: rgba(15, 23, 42, 0.92);
+  --accent2: #ff3b30;
+  --accent2-rgb: 255, 59, 48;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-ink transition-colors duration-300;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+  }
+  h1, h2, h3, h4, .font-nohemi {
+    font-family: 'Nohemi', sans-serif !important;
+  }
+}
+
+@layer utilities {
+  .reveal {
+    @apply opacity-0 translate-y-6 transition-all duration-700 ease-ease;
+  }
+  .reveal.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
