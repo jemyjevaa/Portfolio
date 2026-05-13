@@ -36,11 +36,10 @@ function App() {
         </Routes>
       </main>
       <footer className="bg-[#050505] text-white/20 py-8 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between font-mono text-[12px] border-t border-white/5">
-        <div>© 2026 ∙ DISEÑADO Y DESARROLLADO POR DEV.PORTFOLIO</div>
+        <div>© 2026 ∙ DISEÑADO Y DESARROLLADO POR JESSICA AGUILAR</div>
         <div className="mt-4 md:mt-0 flex gap-6 uppercase tracking-widest">
-          <a href="#" className="hover:text-white transition-colors">Twitter</a>
-          <a href="#" className="hover:text-white transition-colors">GitHub</a>
-          <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
+          
+          <a href="https://www.linkedin.com/in/jessica-aguilar-436317358/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
         </div>
       </footer>
     </div>

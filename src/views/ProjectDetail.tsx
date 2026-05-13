@@ -187,11 +187,11 @@ export const ProjectDetail: React.FC = () => {
               <div className="grid md:grid-cols-2 gap-12 mb-16">
                 <div>
                   <h3 className="text-[11px] font-bold uppercase tracking-[0.2em] text-accent-2 mb-4">// El Desafío</h3>
-                  <p className="text-ink-muted leading-relaxed">{project.details.challenge}</p>
+                  <p className="text-ink-muted leading-relaxed whitespace-pre-line">{project.details.challenge}</p>
                 </div>
                 <div>
                   <h3 className="text-[11px] font-bold uppercase tracking-[0.2em] text-accent-3 mb-4">// La Solución</h3>
-                  <p className="text-ink-muted leading-relaxed">{project.details.solution}</p>
+                  <p className="text-ink-muted leading-relaxed whitespace-pre-line">{project.details.solution}</p>
                 </div>
               </div>
 
@@ -228,17 +228,19 @@ export const ProjectDetail: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="lg:sticky lg:top-32 space-y-8"
             >
-              <div className="p-8 bg-card border border-ink-faint rounded-2xl">
-                <h3 className="text-[11px] font-bold uppercase tracking-[0.2em] text-ink-muted mb-6">Métricas de impacto</h3>
-                <div className="space-y-6">
-                  {project.metrics.map(m => (
-                    <div key={m.label} className="flex justify-between items-end border-b border-surface-alt pb-4">
-                      <span className="text-[14px] text-ink-muted">{m.label}</span>
-                      <span className="font-sans text-2xl text-ink">{m.val}</span>
-                    </div>
-                  ))}
+              {project.type !== 'web' && (
+                <div className="p-8 bg-card border border-ink-faint rounded-2xl">
+                  <h3 className="text-[11px] font-bold uppercase tracking-[0.2em] text-ink-muted mb-6">Métricas de impacto</h3>
+                  <div className="space-y-6">
+                    {project.metrics.map(m => (
+                      <div key={m.label} className="flex justify-between items-end border-b border-surface-alt pb-4">
+                        <span className="text-[14px] text-ink-muted">{m.label}</span>
+                        <span className="font-sans text-2xl text-ink">{m.val}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
               <div className="p-8 bg-card border border-ink-faint rounded-2xl">
                 <h3 className="text-[11px] font-bold uppercase tracking-[0.2em] text-ink-muted mb-6">Tecnologías</h3>
@@ -251,19 +253,7 @@ export const ProjectDetail: React.FC = () => {
                 </div>
               </div>
 
-              <div className="p-8 bg-ink text-surface rounded-2xl shadow-xl">
-                 <div className="flex items-center gap-2 mb-4">
-                    <Zap size={16} className="text-accent-2" />
-                    <span className="text-[10px] font-bold uppercase tracking-widest opacity-60">Status</span>
-                 </div>
-                 <p className="text-[18px] font-sans mb-6 leading-tight">Proyecto finalizado y entregado con 100% de éxito.</p>
-                 <a 
-                   href="#" 
-                   className="inline-flex items-center gap-2 px-6 py-3 bg-accent-2 text-white rounded-lg font-bold text-[14px] transition-transform hover:scale-105 active:scale-95"
-                 >
-                   Ver proyecto en vivo <ArrowRight size={16} />
-                 </a>
-              </div>
+
             </motion.aside>
 
           </div>

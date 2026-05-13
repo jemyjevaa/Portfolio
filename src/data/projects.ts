@@ -18,11 +18,10 @@ import app2_4 from '../assets/app2/0x0ss-9.png';
 import app2_5 from '../assets/app2/0x0ss-10.png';
 
 // Gym Imports
-import gymMain from '../assets/gym/WhatsApp Image 2026-05-12 at 11.13.51.jpeg';
-import gym_2 from '../assets/gym/gym1.jpeg';
-import gym_3 from '../assets/gym/WhatsApp Image 2026-05-12 at 11.13.51 (2).jpeg';
-import gym_4 from '../assets/gym/WhatsApp Image 2026-05-12 at 11.13.52.jpeg';
-import gym_5 from '../assets/gym/WhatsApp Image 2026-05-12 at 11.13.52 (1).jpeg';
+import gymMain from '../assets/gym/gym2.png';
+import gym_2 from '../assets/gym/gym3.png';
+import gym_3 from '../assets/gym/gym4.png';
+import gym_4 from '../assets/gym/gym5.png';
 
 // WebCorp Imports
 import webCorpMain from '../assets/webcorp/WhatsApp Image 2026-05-12 at 11.13.52.jpeg';
@@ -92,12 +91,12 @@ export const projects: Project[] = [
     id: 'mobile-app-1',
     title: "Rutas Empresariales — App Móvil",
     desc: "Desarrollo de aplicación móvil de alto rendimiento con enfoque en experiencia de usuario fluida y diseño moderno.",
-    tags: ["Flutter", "Fast Api"],
+    tags: ["Flutter", "Fast Api", "Swift (iOS Deployment)"],
     metrics: [
       { val: "1.8k", label: "Descargas en IOS" },
       { val: "5.0★", label: "Rating" }
     ],
-    tech: "Flutter · Fast Api",
+    tech: "Flutter · Fast Api · Swift (iOS Deployment)",
     featured: false,
     color: "linear-gradient(135deg,#f1f5f9,#e2e8f0)", 
     type: 'mobile',
@@ -110,8 +109,8 @@ export const projects: Project[] = [
       app1_5
     ],
     details: {
-      challenge: "Optimizar el rendimiento en dispositivos de gama media manteniendo animaciones complejas y un estado global sincronizado en tiempo real.",
-      solution: "Implementación de arquitectura modular y uso de librerías nativas para garantizar los 60fps en todas las transiciones clave.",
+      challenge: "El desafío principal era gestionar el rastreo de unidades de transporte de manera precisa sin saturar el servidor. Se requería una solución que mantuviera la ubicación actualizada para el usuario final, garantizando al mismo tiempo la estabilidad de la infraestructura durante picos de uso.",
+      solution: "Implementé una arquitectura híbrida de comunicación para optimizar el flujo de datos entre el cliente y el servidor:\n\n• Sincronización mediante WebSockets: Conexiones bidireccionales para ubicación instantánea.\n• Smart Polling & Caching: Ajuste de la frecuencia de peticiones según el movimiento, reduciendo el tráfico.\n• Gestión de Metadatos: Caché de metadatos para minimizar consultas a la DB.\n\n🚀 Impacto y Resultados\n• Reducción de Carga en Servidor de forma significativa.\n• Experiencia de Usuario Fluida en el mapa sin saltos bruscos.\n• Arquitectura Escalable preparada para soportar un incremento en unidades simultáneas.",
       stack: "React Native, Expo, Redux Toolkit, Firebase.",
       kpis: ["Latencia < 20ms", "Crash-free 99.9%", "Diseño Pixel-Perfect"],
       mockupType: 'mobile',
@@ -126,20 +125,20 @@ export const projects: Project[] = [
     id: 'mobile-app-2',
     title: "Transporte Empresarial — App Móvil PANAMA",
     desc: "Aplicación móvil diseñada para el monitoreo de sostenibilidad y huella de carbono personal mediante una interfaz intuitiva y minimalista.",
-    tags: ["Flutter", "Fast Api"],
+    tags: ["Flutter", "Fast Api", "Swift (iOS Deployment)"],
     metrics: [
       { val: "1k", label: "Usuarios" },
       { val: "5.0★", label: "Store" }
     ],
-    tech: "Flutter · Fast Api",
+    tech: "Flutter · Fast Api · Swift (iOS Deployment)",
     featured: false,
     color: "linear-gradient(135deg,#f1f5f9,#e2e8f0,#cbd5e1)",
     type: 'mobile',
     mainImage: app2Main,
     gallery: [app2Main, app2_2, app2_3, app2_4, app2_5],
     details: {
-      challenge: "Lograr una visualización de datos compleja de forma sencilla y accesible para usuarios no técnicos.",
-      solution: "Uso de micro-interacciones y una arquitectura de componentes reactivos para reportes en tiempo real.",
+      challenge: "Adaptar un sistema de logística de transporte para el mercado de Panamá, enfrentando desafíos de despliegue regional restringido y la necesidad de una interfaz operativa que responda a condiciones climáticas y geográficas específicas de la zona.",
+      solution: "Implementación Clave\nEn este proyecto, lideré la adaptación y el despliegue estratégico de la plataforma:\n\n• Geolocalización Personalizada: Integré la API de Google Maps con capas de personalización avanzadas que muestran condiciones climáticas en tiempo real, vital para la operación logística en la región.\n• Interfaz para Operadores: Diseñé y desarrollé un módulo de registro de paradas y tiempos de espera optimizado para el uso rudo, permitiendo el control de capacidad de las unidades de forma intuitiva.\n• Despliegue Estratégico (App Store): Gestioné la configuración técnica para el lanzamiento en tiendas, implementando restricciones geográficas específicas (Panamá/México) y cumpliendo con las políticas de privacidad y seguridad internacionales.\n• Identidad Local: Personalicé la experiencia de usuario mediante marcadores y elementos visuales con identidad cultural local, elevando el sentido de pertenencia de los usuarios finales.\n\nLogros Principales\n• Lanzamiento Exitoso: Cumplimiento total de los requisitos de la App Store para una distribución controlada y segura.\n• Optimización Operativa: Mejora en el registro de tiempos de espera, permitiendo una mejor toma de decisiones basada en datos reales de las rutas panameñas.\n• Alta Fidelidad Visual: Implementación de un diseño de mapa personalizado que combina estética profesional con utilidad funcional (clima/tráfico).",
       stack: "React Native, TypeScript, Node.js, AWS.",
       kpis: ["Retención +30%", "UX Premium", "Cross-Platform"],
       mockupType: 'mobile',
@@ -161,10 +160,10 @@ export const projects: Project[] = [
     ],
     tech: "React · Vite · Tailwind CSS",
     featured: true,
-    color: "linear-gradient(135deg,#f1f5f9,#e2e8f0)",
+    color: "linear-gradient(135deg,#fee2e2,#fecaca)",
     type: 'web',
     mainImage: gymMain,
-    gallery: [gymMain, gym_2, gym_3, gym_4, gym_5],
+    gallery: [gymMain, gym_2, gym_3, gym_4],
     details: {
       challenge: "Integrar un sistema de reservas dinámico con una interfaz que motive al usuario a mantener su actividad física.",
       solution: "Diseño centrado en el usuario con dashboards personalizados y optimización de carga mediante Vite.",
