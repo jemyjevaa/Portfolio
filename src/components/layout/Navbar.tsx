@@ -60,14 +60,14 @@ export const Navbar: React.FC = () => {
             href="#contact"
             className="text-[13px] font-semibold tracking-wide px-5 py-2 bg-ink text-surface rounded-sm transition-all hover:opacity-80 hover:-translate-y-px"
           >
-            Hablemos →
+            Contacto →
           </a>
         ) : (
           <Link
             to="/#contact"
             className="text-[13px] font-semibold tracking-wide px-5 py-2 bg-ink text-surface rounded-sm transition-all hover:opacity-80 hover:-translate-y-px"
           >
-            Hablemos →
+            Contacto →
           </Link>
         )}
       </div>
