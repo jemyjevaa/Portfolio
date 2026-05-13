@@ -22,7 +22,7 @@ export const Contact: React.FC = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 text-[1.05rem] font-bold px-10 py-4 bg-accent-2 text-white rounded-lg transition-all hover:bg-[#a00000] hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(192,0,0,0.35)] tracking-wide mb-12"
           >
-            Hablemos <ArrowUpRightIcon className="w-5 h-5" />
+            Contacto <ArrowUpRightIcon className="w-5 h-5" />
           </a>
 
           <div className="font-mono text-[11px] tracking-[0.15em] uppercase text-surface/20 mb-8">
