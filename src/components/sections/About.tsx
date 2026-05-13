@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import meImage from '../../assets/ME.jpg';
 
 export const About: React.FC = () => {
   return (
@@ -7,9 +8,11 @@ export const About: React.FC = () => {
       <div className="max-w-[1200px] mx-auto">
         <div className="grid md:grid-cols-[1fr_1.5fr] gap-20 items-start">
           <div className="aspect-[3/4] bg-surface-alt rounded-lg overflow-hidden relative group border border-ink-faint">
-            <div className="w-full h-full flex items-center justify-center font-sans text-8xl text-ink-faint bg-surface-alt transition-transform duration-700 group-hover:scale-110">
-              ✦
-            </div>
+            <img 
+              src={meImage} 
+              alt="Jessica" 
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
             <div className="absolute bottom-6 left-6 bg-surface px-4 py-2 rounded-sm text-[12px] font-semibold tracking-wider text-ink shadow-sm border border-ink-faint">
               Desarrolladora · Diseñadora
             </div>
